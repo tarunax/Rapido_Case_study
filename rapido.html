@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapido Product Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        'rapido-orange': '#FF6B35',
+                        'rapido-dark': '#2C3E50'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .dark .card-hover:hover {
+            box-shadow: 0 10px 25px rgba(255,255,255,0.05);
+        }
+        
+        .section-enter {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .section-enter.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+                    </svg>
+                </div>
+                <h1 class="text-5xl font-bold mb-4">Rapido</h1>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">Revolutionizing India's Last-Mile Connectivity</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 max-w-6xl py-12">
+        
+        <!-- Problem Statement -->
+        <section class="section-enter mb-16">
+            <div class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-2xl p-8 card-hover">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-red-700 dark:text-red-300">Problem Solved</h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            In India's dense urban centers, traditional public transportation and private vehicle ownership often fall short in providing efficient and affordable last-mile connectivity. Rapido, an on-demand bike taxi platform, has emerged as a solution to this pressing problem, offering users a convenient, time-saving, and cost-effective mode of transportation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Personas -->
+        <section class="section-enter mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">User Personas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Young Professionals</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Seeking quick and flexible transportation for daily commutes and errands.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Students & Gig Workers</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Relying on affordable transportation to access educational institutions and workplaces.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Urban Residents</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Facing traffic congestion and limited parking, needing nimble mobility solutions.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Tourists & Visitors</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Requiring hassle-free navigation through unfamiliar cities and neighborhoods.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Context -->
+        <section class="section-enter mb-16">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 card-hover">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-300">Market Context</h2>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    India's transportation landscape is characterized by a growing urban population, increasing traffic congestion, and the need for sustainable mobility solutions. The rise of on-demand services and the shift towards shared economy models have created a favorable environment for the growth of bike taxi platforms like Rapido.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="section-enter mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Key Product Features</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">On-Demand Availability</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Request a bike taxi with just a few taps, with average wait times of 5-10 minutes.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Competitive rates compared to traditional taxis, accessible for a wide range of users.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Multimodal Integration</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Expanded offerings include auto-rickshaws and car-pooling services.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Safety & Reliability</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Mandatory helmets, driver verification, and insurance coverage ensure security.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Loyalty Program</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Rewards program incentivizes frequent usage and referrals for better engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Strategies -->
+        <section class="section-enter mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Growth Strategies</h2>
+            <div class="space-y-6">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-sm">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Geographical Expansion</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Strategic expansion across India, targeting both tier-1 and tier-2 cities with high growth potential.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-sm">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Partnerships & Integrations</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Strategic alliances with e-commerce, food delivery, and complementary service providers for cross-promotion.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-sm">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Data-Driven Optimization</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Leveraging advanced analytics and machine learning to optimize operations and improve user experience.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-sm">4</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Marketing & Branding</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Multi-channel campaigns including digital advertising, social media, and localized brand activations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="section-enter mb-16">
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-2xl p-8 card-hover">
+                <h2 class="text-2xl font-bold mb-6 text-orange-700 dark:text-orange-300">Challenges & Competition</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <p class="text-gray-700 dark:text-gray-300"><strong>Regulatory Landscape:</strong> Navigating evolving regulatory frameworks for bike taxi industry compliance.</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <p class="text-gray-700 dark:text-gray-300"><strong>Competition:</strong> Established players like Uber and Ola entering the bike taxi market.</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <p class="text-gray-700 dark:text-gray-300"><strong>Driver Retention:</strong> Maintaining a reliable pool of skilled and dedicated drivers for scalability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Improvements -->
+        <section class="section-enter mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Suggested Improvements</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-3">Expand Multimodal Offerings</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Integrate electric vehicles and explore innovative mobility solutions to enhance value proposition.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-3">Enhance Safety & Sustainability</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Invest in AI-powered driver monitoring and improved helmet technology for better trust and responsibility.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-3">Leverage Data Analytics</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Deeper insights into user behavior and preferences for personalized experiences and targeted marketing.</p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover border border-gray-100 dark:border-gray-700">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-3">International Expansion</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Evaluate feasibility of expanding to other emerging markets with similar transportation challenges.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section-enter">
+            <div class="bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-2xl p-8 text-center card-hover">
+                <h2 class="text-3xl font-bold mb-4">Key Takeaways</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Rapido's user-centric approach, innovative product features, and strategic growth initiatives have positioned the company as a leading player in India's on-demand mobility landscape. By continuously addressing user needs, navigating regulatory hurdles, and staying ahead of the competition, Rapido is poised to shape the future of last-mile connectivity in the country.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-enter').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
